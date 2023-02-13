@@ -1,31 +1,26 @@
-
 const mongoose = require("mongoose");
 
-
 const theatreSchema = new mongoose.Schema({
-    
     name:{
-        type: String,
-        required: true
+        type:String,
+        required:true
     },
     description:{
-        type: String,
-        required: true
+        type:String,
+        required:true
     },
     city:{
-        type: String,
-        required: true
+        type:String,
+        required:true
     },
     pinCode:{
-        type: Number,
-        required: true
+        type:Number,
+        required:true
     },
     movies:{
-        type:[mongoose.SchemaType.ObjectId],
-        ref: 'Movie'
+        type:[mongoose.SchemaTypes.ObjectId],
+        ref:'Movie'
     }
+});
 
-})
-
-module.exports = mongoose.model("Theatre",theatreSchema)
-
+module.exports = mongoose.model("Theatre",theatreSchema);
